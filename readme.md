@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a REST API developed using ExpressJS and MongoDB Atlas using the MVC archetecture with authentication and authorization included. Feel free to use this repo as a template for your project.
+This is a REST API developed using ExpressJS and MongoDB Atlas using the MVC archetecture. API security features implemented. Feel free to use this repo as a template for your project.
 
 ## Prerequisites
 
@@ -24,6 +24,7 @@ This is a REST API developed using ExpressJS and MongoDB Atlas using the MVC arc
 - ESLint
 - DotEnv
 - IntelliCode
+- Better Comments
 - JavaScript (ES6) code snipets
 - Nodejs Snippets
 - npm

@@ -13,6 +13,10 @@ specifiers:
   eslint-plugin-react: 7.28.0
   eslint-plugin-react-hooks: 4.3.0
   express: ^4.17.3
+  express-mongo-sanitize: ^2.2.0
+  express-rate-limit: ^6.4.0
+  helmet: ^5.0.2
+  hpp: ^0.2.3
   jsonwebtoken: ^8.5.1
   mongoose: ^6.3.0
   morgan: ^1.10.0
@@ -20,17 +24,23 @@ specifiers:
   prettier: ^2.6.2
   slugify: ^1.6.5
   validator: ^13.7.0
+  xss-clean: ^0.1.1
 
 dependencies:
   bcryptjs: 2.4.3
   dotenv: 16.0.0
   express: 4.17.3
+  express-mongo-sanitize: 2.2.0
+  express-rate-limit: 6.4.0_express@4.17.3
+  helmet: 5.0.2
+  hpp: 0.2.3
   jsonwebtoken: 8.5.1
   mongoose: 6.3.0
   morgan: 1.10.0
   nodemailer: 6.7.3
   slugify: 1.6.5
   validator: 13.7.0
+  xss-clean: 0.1.1
 
 devDependencies:
   eslint: 8.13.0
@@ -798,6 +808,20 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
+  /express-mongo-sanitize/2.2.0:
+    resolution: {integrity: sha512-PZBs5nwhD6ek9ZuP+W2xmpvcrHwXZxD5GdieX2dsjPbAbH4azOkrHbycBud2QRU+YQF1CT+pki/lZGedHgo/dQ==}
+    engines: {node: '>=10'}
+    dev: false
+
+  /express-rate-limit/6.4.0_express@4.17.3:
+    resolution: {integrity: sha512-lxQRZI4gi3qAWTf0/Uqsyugsz57h8bd7QyllXBgJvd6DJKokzW7C5DTaNvwzvAQzwHGFaItybfYGhC8gpu0V2A==}
+    engines: {node: '>= 12.9.0'}
+    peerDependencies:
+      express: ^4 || ^5
+    dependencies:
+      express: 4.17.3
+    dev: false
+
   /express/4.17.3:
     resolution: {integrity: sha512-yuSQpz5I+Ch7gFrPCk4/c+dIBKlQUxtgwqzph132bsT6qhuzss6I8cLJQz7B3rFblzd6wtcI0ZbGltH/C4LjUg==}
     engines: {node: '>= 0.10.0'}
@@ -989,6 +1013,19 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: true
+
+  /helmet/5.0.2:
+    resolution: {integrity: sha512-QWlwUZZ8BtlvwYVTSDTBChGf8EOcQ2LkGMnQJxSzD1mUu8CCjXJZq/BXP8eWw4kikRnzlhtYo3lCk0ucmYA3Vg==}
+    engines: {node: '>=12.0.0'}
+    dev: false
+
+  /hpp/0.2.3:
+    resolution: {integrity: sha512-4zDZypjQcxK/8pfFNR7jaON7zEUpXZxz4viyFmqjb3kWNWAHsLEUmWXcdn25c5l76ISvnD6hbOGO97cXUI3Ryw==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      lodash: 4.17.21
+      type-is: 1.6.18
+    dev: false
 
   /http-errors/1.8.1:
     resolution: {integrity: sha512-Kpk9Sm7NmI+RHhnj6OIWDI1d6fIoFAtFt9RLaTMRlg/8w49juAStsrBgp0Dp4OdxdVbRIeKhtCUvoi/RuAhO4g==}
@@ -1277,6 +1314,10 @@ packages:
 
   /lodash.once/4.1.1:
     resolution: {integrity: sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=}
+    dev: false
+
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: false
 
   /loose-envify/1.4.0:
@@ -1962,3 +2003,13 @@ packages:
   /wrappy/1.0.2:
     resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=}
     dev: true
+
+  /xss-clean/0.1.1:
+    resolution: {integrity: sha1-07poTYXM1SBUlj0BrWqzbWYtsaU=}
+    dependencies:
+      xss-filters: 1.2.6
+    dev: false
+
+  /xss-filters/1.2.6:
+    resolution: {integrity: sha1-aLOQicsd/4udvIiUhIObL1B/XFU=}
+    dev: false
