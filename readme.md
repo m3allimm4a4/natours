@@ -17,13 +17,13 @@ DB connection string should have <PASSWORD> instead of your password. Fill in th
 
 ## VS Code Extensions
 
-. Prettier
-. ESLint
-. DotEnv
-. IntelliCode
-. JavaScript (ES6) code snipets
-. Nodejs Snippets
-. npm
-. Thunderclient (it's postman inside vscode)
-. Atom One Dark
-. Material Icons
+- Prettier
+- ESLint
+- DotEnv
+- IntelliCode
+- JavaScript (ES6) code snipets
+- Nodejs Snippets
+- npm
+- Thunderclient (it's postman inside vscode)
+- Atom One Dark
+- Material Icons
