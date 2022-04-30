@@ -15,7 +15,7 @@ This is a REST API developed using ExpressJS and MongoDB Atlas using the MVC arc
 ## Project setup
 
 - `npm i`
-- Create a file called `config.env` inside the "src/environment" folder. Refer to `src/environment/config-template.env`
+- Create `config.env` inside `src/environment`. Refer to `src/environment/config-template.env`
 - DB connection string should have `<PASSWORD>` instead of your actual password. Fill in the password in the `DB_PASSWORD` variable
 
 ## VS Code Extensions
