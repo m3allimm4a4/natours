@@ -8,7 +8,9 @@
     "start:prod": "SET NODE_ENV=production && nodemon ./src/server.js",
     "debug": "ndb ./src/server.js",
     "format": "npx prettier --write .",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "delete-dev-data": "node ./dev-data/data/import-dev-data.js --delete",
+    "import-dev-data": "node ./dev-data/data/import-dev-data.js --import"
   },
   "author": "Bechara El Rammouz",
   "license": "MIT",

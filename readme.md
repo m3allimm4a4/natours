@@ -6,17 +6,16 @@ This is a REST API developed using ExpressJS and MongoDB Atlas using the MVC arc
 
 ## Prerequisites
 
-- NodeJS 14.19.0+ (LTS)
-- pnpm installed globally (cuz it's way better than npm)
-  `npm i -g pnpm`
-- nodemon installed globally (for live reload)
-  `npm i -g nodemon`
+- NodeJS LTS 14.19.0+ (It's prefered to use nvm).
+- pnpm installed globally. `npm i -g pnpm` (cuz it's way better than npm)
+- nodemon installed globally. `npm i -g nodemon` (for live reload)
 
 ## Project setup
 
-- `npm i`
-- Create `config.env` inside `src/environment`. Refer to `src/environment/config-template.env`
-- DB connection string should have `<PASSWORD>` instead of your actual password. Fill in the password in the `DB_PASSWORD` variable
+- `pnpm install`.
+- Create `config.env` inside `src/environment`. Refer to `src/environment/config-template.env`.
+- DB connection string should have `<PASSWORD>` instead of your actual password. Fill in the password in the `DB_PASSWORD` variable.
+- To import dev-data to DB `pnpm import-dev-data`.
 
 ## VS Code Extensions
 

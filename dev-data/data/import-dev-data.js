@@ -5,7 +5,7 @@ const Tour = require('../../src/models/tourModel');
 
 dotenv.config({ path: './src/environment/config.env' });
 const DB = process.env.DB_CONNECTION_STRING.replace('<PASSWORD>', process.env.DB_PASSWORD);
-const tours = JSON.parse(fs.readFileSync(`${__dirname}/tours-simple.json`, 'utf-8'));
+const tours = JSON.parse(fs.readFileSync(`${__dirname}/tours.json`, 'utf-8'));
 
 //? Atlas DB Connection
 mongoose
