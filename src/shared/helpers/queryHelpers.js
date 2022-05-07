@@ -1,13 +1,13 @@
 const Tour = require('../../models/tourModel');
 
-exports.filter = queryObj => {
+exports.filter = (queryObj, query) => {
   const queryObjCopy = { ...queryObj };
   const excludedFields = ['page', 'sort', 'limit', 'fields'];
   excludedFields.forEach(el => delete queryObjCopy[el]);
 
   let queryStr = JSON.stringify(queryObjCopy);
   queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`);
-  return Tour.find(JSON.parse(queryStr));
+  return query.find(JSON.parse(queryStr));
 };
 
 exports.sort = (query, queryStr) => {
