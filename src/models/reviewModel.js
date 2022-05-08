@@ -35,6 +35,8 @@ const reviewSchema = new mongoose.Schema(
   }
 );
 
+reviewSchema.index({ tour: 1, user: 1 }, { unique: true });
+
 reviewSchema.static('calcAverageRatings', async function (tourId) {
   const stats = await this.aggregate([
     { $match: { tour: tourId } },
