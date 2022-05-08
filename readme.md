@@ -15,7 +15,12 @@ This is a REST API developed using ExpressJS and MongoDB Atlas using the MVC arc
 - `pnpm install`.
 - Create `config.env` inside `src/environment`. Refer to `src/environment/config-template.env`.
 - DB connection string should have `<PASSWORD>` instead of your actual password. Fill in the password in the `DB_PASSWORD` variable.
-- To import dev-data to DB `pnpm import-dev-data`.
+
+## Import Dev Data
+
+- Go to `src/models/userModel.js` and comment out the pre save middleware to disable password hashing (since dev-data users are already hashed).
+- Clear all DB data `pnpm delete-dev-data`.
+- Import new data `pnpm import-dev-data`.
 
 ## VS Code Extensions
 
