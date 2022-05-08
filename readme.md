@@ -21,6 +21,7 @@ This is a REST API developed using ExpressJS and MongoDB Atlas using the MVC arc
 - Go to `src/models/userModel.js` and comment out the pre save middleware to disable password hashing (since dev-data users are already hashed).
 - Clear all DB data `pnpm delete-dev-data`.
 - Import new data `pnpm import-dev-data`.
+- Password for all imported users is `test1234`.
 
 ## VS Code Extensions
 
