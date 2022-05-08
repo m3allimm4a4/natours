@@ -16,8 +16,11 @@ const {
   updatePassword,
 } = require('../controllers/authController');
 const { protect } = require('../middlewares/authMiddlewares');
+const { getMe } = require('../middlewares/userMiddlewares');
 
 const router = express.Router();
+
+router.get('/me', protect, getMe, getUser);
 
 router.post('/signup', signup);
 router.post('/signin', signin);
