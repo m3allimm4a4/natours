@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const path = require('path');
 
 const AppError = require('./shared/errors/appError');
 const globalErrorHandler = require('./middlewares/errorMiddlewares');
@@ -14,7 +15,13 @@ const reviewRouter = require('./routes/reviewRoutes');
 
 const app = express();
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
 //! Global Middlewares
+
+//Serving static files
+app.use(express.static('./public'));
 
 //Seurity HTTP headers
 app.use(helmet());
@@ -53,9 +60,6 @@ app.use(
   })
 );
 
-//Serving static files
-app.use(express.static(`${__dirname}/public`));
-
 //CORS
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -69,6 +73,10 @@ app.use((req, res, next) => {
 });
 
 //! Routes
+app.get('/', (req, res) => {
+  res.status(200).render('base', { tour: 'The Forest Hicker', user: 'Bechara' });
+});
+
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);
